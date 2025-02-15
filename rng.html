@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>_zaxt - rng</title>
+  <link rel="icon" type="image/x-icon" href="usb_icon_website.jpeg">
+   <style>
+.btn-group .button {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+.btn-group .button:not(:last-child) {
+  border-bottom: none;
+}
+
+.btn-group .button:hover {
+  background-color: #eeeeee;
+}
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random 64-bit Number Generator</title>
+    <script>
+        function generateRandomNumber() {
+            const max = BigInt("18446744073709551615"); // 2^64 - 1
+            const randomNum = BigInt(Math.floor(Math.random() * Number(max)));
+            document.getElementById("randomNumber").innerText = "Random Number: " + randomNum;
+        }
+    </script>
+</head>
+<body>
+  <center>
+     <a href="./">
+   <button style="font-family:'Courier New'" class="button">go back to the home page</button>
+    </a>
+   <button style="font-family:'Courier New'" class="button" onclick="generateRandomNumber()">click me for a random number! (1 to the 64 bit integer limit)</button>
+     <p style="font-family:'Courier New'" id="randomNumber">click the button to generate a number</p>
+    </div>
+</center>
+</body>
+</html>
