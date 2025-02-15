@@ -33,13 +33,14 @@
         function generateRandomNumber() {
             const max = BigInt("18446744073709551615"); // 2^64 - 1
             const randomNum = BigInt(Math.floor(Math.random() * Number(max)));
-            document.getElementById("randomNumber").innerText = "Random Number: " + randomNum;
+            document.getElementById("randomNumber").innerText = randomNum;
         }
     </script>
 </head>
 <body>
   <center>
-     <a href="./">
+    <div class="btn-group">
+      <a href="./">
    <button style="font-family:'Courier New'" class="button">go back to the home page</button>
     </a>
    <button style="font-family:'Courier New'" class="button" onclick="generateRandomNumber()">click me for a random number! (1 to the 64 bit integer limit)</button>
