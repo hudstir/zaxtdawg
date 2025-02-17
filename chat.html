@@ -21,7 +21,8 @@
 <body>
     <h1>the textbox</h1>
     <textarea id="sharedBox" placeholder="type something..."></textarea>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js" integrity="sha384-pJjft4e/AF5zhB4iHJL/H2CvVi+0txMnYx5YXyFeoAgXa8+Bf1e1NnNKuTbY6Nf0" crossorigin="anonymous"></script>
     <script>
         const socket = io("http://www.zaxt.org:3000"); // Updated to match your website's domain
         const textbox = document.getElementById("sharedBox");
