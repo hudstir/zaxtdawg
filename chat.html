@@ -19,11 +19,11 @@
     </style>
 </head>
 <body>
-    <h1>Real-Time Shared Textbox</h1>
-    <textarea id="sharedBox" placeholder="Type something..."></textarea>
+    <h1>the textbox</h1>
+    <textarea id="sharedBox" placeholder="type something..."></textarea>
     
     <script>
-        const socket = io("http://localhost:3000"); // Change to your server URL if hosted
+        const socket = io("http://www.zaxt.org:3000"); // Updated to match your website's domain
         const textbox = document.getElementById("sharedBox");
 
         textbox.addEventListener("input", () => {
