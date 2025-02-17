@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Textbox</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        textarea {
+            width: 80%;
+            height: 200px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Shared Textbox</h1>
+    <textarea id="sharedBox" placeholder="Type something..."></textarea>
+    
+    <script>
+        const socket = io("http://localhost:3000"); // Change to your server URL if hosted
+        const textbox = document.getElementById("sharedBox");
+
+        textbox.addEventListener("input", () => {
+            socket.emit("textUpdate", textbox.value);
+        });
+
+        socket.on("textUpdate", (data) => {
+            textbox.value = data;
+        });
+    </script>
+</body>
+</html>
